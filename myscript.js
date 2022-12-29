@@ -165,6 +165,35 @@ let contents = [
         "length": "24",
        
     },
+    {
+        "_id": "618ac7d68f7acf5b243480bf",
+        "type": 8, //podcast
+        "name": "",
+        "image": "57abb8bb8902081f2cb51e81458136cff9b09f6c.jpg",
+        "description": "",
+        "year": "",
+        "author": "",
+        "url": "https://open.spotify.com/episode/2L4GvMtB1nioWzIbN2fJq8",
+        "externId": "2L4GvMtB1nioWzIbN2fJq8",
+        "__v": 0,
+        "updatedAt": null,
+        "length": "24",
+       
+    },
+    {
+        "_id": "6000674d0fc291429667c793",
+        "type": 1, //movie
+        "name": "",
+        "year": "1900",
+        "description": "",
+        "image": "",
+        "externId": "268",
+        "__v": 0,
+        "updatedAt": "2022-11-29T18:47:29.368Z",
+        "length": "6",
+        "originalTitle": "Batman",
+   
+    },
 ].map(v => ({...v, score: ""})) //ADICIONA O KEY VALUE "score" a todos objetos do array
 
 
