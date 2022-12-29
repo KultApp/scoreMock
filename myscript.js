@@ -194,11 +194,40 @@ let contents = [
         "originalTitle": "Batman",
    
     },
+    {
+        "_id": "333",
+        "type": 1, //movie
+        "name": "",
+        "year": "1900",
+        "description": "",
+        "image": "",
+        "externId": "268",
+        "__v": 0,
+        "updatedAt": "2022-11-29T18:47:29.368Z",
+        "length": "6",
+        "originalTitle": "Batman",
+   
+    },
 ].map(v => ({...v, score: ""})) //ADICIONA O KEY VALUE "score" a todos objetos do array
 
 
+
+
+contentsFiltered = contents.filter(function( obj ) { //retorna apenas objetos do array que tenham o key value "name" !== ''
+    return obj.name !== '';
+});
+
+
+
+console.log('somente com nome preenchido')
+console.log(contentsFiltered)
+
+
+
+
+
 /* ATRIBUIÇÃO DE PONTOS CONSOANTE REGRA (essa parte do codigo acho que pode ser mais performatica e melhorada) */ 
-contents.forEach(element => { 
+contentsFiltered.forEach(element => { 
     switch (element.type) {//case type of content
       case 1: case 2://MOVIE AND TV SHOW
           var newScore = 6; //Para filmes e tv show ja começa com pontuação 4
@@ -288,23 +317,23 @@ contents.forEach(element => {
           element.score = newScore; //atribui os pontos ao key score
   }
   
-  return contents;
+  return contentsFiltered;
   
   });
 
  
 //faz o sorting e ordena por score e ano
-contents.sort(function (rank1, rank2) {
+contentsFiltered.sort(function (rank1, rank2) {
     if (rank1.score > rank2.score) return -1;
     if (rank1.score < rank2.score) return 1;
 
      
     if (rank1.score === rank2.score && rank1.year < rank2.year) return 1;
     if (rank1.score === rank2.score && rank1.year > rank2.year) return -1;
-    return contents
+    return contentsFiltered
 });
 
-console.log(contents, '')
+console.log(contentsFiltered, '')
 
 
 
