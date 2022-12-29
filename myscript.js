@@ -340,7 +340,7 @@ console.log(contentsFiltered, '')
 //DEMO EXAMPLE - MOCK (apenas para visualizacao nesse mock )
 
 var d1 = document.getElementById('teste');
-contents.forEach(el => {
+contentsFiltered.forEach(el => {
 
   switch (el.type) {//case type of content
   case 1:
